@@ -1,0 +1,7 @@
+{
+	"less": {
+		"dir": 	"assets/less",
+		"file": "assets/less/theme.less"
+	},
+	"css": 	"assets/css"
+}
