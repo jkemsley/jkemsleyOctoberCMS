@@ -1,0 +1,10 @@
+{
+  "name": "jkemsley",
+  "version": "1.0.0",
+  "description": "JKemsley OctoberCMS theme",
+  "author": "Jody Kemsley",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-less": "^3.0.1"
+  }
+}
