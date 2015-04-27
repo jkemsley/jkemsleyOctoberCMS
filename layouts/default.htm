@@ -1,4 +1,6 @@
 description = "Defualt layout"
+
+[googleTracker]
 ==
 <!DOCTYPE html>
 <html lang="en">
@@ -7,10 +9,11 @@ description = "Defualt layout"
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="author" content="jacoweb">
-	<title>JKemsley</title>
+  <meta name="author" content="jkgilb">
+	<title>Jody Kemsley-Gilbert | Home</title>
 
   {% styles %}
+  
   <link href="{{ [
       'assets/css/theme.css'
   ]|theme }}" rel="stylesheet">
@@ -26,16 +29,16 @@ description = "Defualt layout"
 </head>
 <body>
 
-<!--home start-->
-<div id="home">
+<!--home -->
+<header id="home">
   {% partial 'home' %}
-</div>
-<!--home end-->
+</header>
 
-<!--coming soon start-->
-<div id="comingsoon">
+<!--coming soon section-->
+<section id="comingsoon">
   {% partial 'comingsoon' %}
-</div>
-<!--coming soon end-->
+</section>
+<!-- Google analytics component -->
+{% component 'googleTracker' %}
 </body>
 </html>
