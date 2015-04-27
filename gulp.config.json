@@ -3,5 +3,9 @@
 		"dir": 	"assets/less",
 		"file": "assets/less/theme.less"
 	},
-	"css": 	"assets/css"
+	"css": 	"assets/css",
+    "fonts": "assets/fonts",
+    "vendorFonts": [
+      "assets/vendor/fontawesome/fonts/*"
+    ]
 }

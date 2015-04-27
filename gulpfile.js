@@ -21,6 +21,18 @@ gulp.task('less', function() {
 		.pipe(gulp.dest(paths.css));
 });
 
+/**
+ * Process Fonts
+ * @return {Stream}
+ */
+
+gulp.task('fonts', function() {
+   log(colors.yellow('Copying fonts'));
+
+    return gulp.src(paths.vendorFonts)
+        .pipe(gulp.dest(paths.fonts));
+});
+
 gulp.task('default', ['less'], function() {
 	log(colors.green('Theme Built Successfully :-)'));
 	return gulp.src('').pipe(plug.notify({
