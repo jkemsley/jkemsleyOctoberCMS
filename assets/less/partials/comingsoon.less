@@ -1,0 +1,89 @@
+#comingsoon {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 190px;
+  z-index: 0;
+
+  @media (min-width: @screen-xs-min) { height: 300px; }
+
+  h1 {
+		font-size: 24px;
+
+  	@media (min-width: @screen-xs-min) { font-size: @font-size-h2; }
+  	@media (min-width: @screen-sm-min) { font-size: @font-size-h1; }
+
+		a {
+		  position: relative;
+		  display: inline-block;
+		  padding: 0 0 3px 5px;
+		  line-height: 1.6;
+
+		  &:before, &:after {
+				content: '';
+				position: absolute;
+				left: 0;
+				width: 100%;
+				height: 1px;
+				background: @link-color;
+				opacity: 0;
+				transition: opacity 0.3s, transform 0.3s;
+				transform: translateY(-10px);
+		  }
+
+		  &:before {
+				top: 0;
+				transform: translateY(-10px);
+		  }
+
+		  &:after {
+				bottom: 0;
+				transform: translateY(10px);
+		  }
+
+		  &:hover, &:focus {
+				text-decoration: none;
+				color: @link-color;
+
+				&:before, &:after {
+				  opacity: 1;
+				  transform: translateY(0px);
+				}
+		  }
+		}
+  }
+
+  .sm-line {
+		height: 1px;
+		width: 50px;
+		margin: 23px auto 20px;
+		background: lighten(@link-color, 15%);
+  }
+
+  .social {
+		padding-top: 5px;
+		font-size: @font-size-h1;
+		@media (min-width: @screen-xs-min) {font-size: 44px;}
+		@media (min-width: @screen-md-min) {font-size: 44px;}
+		@media (min-width: @screen-lg-min) {font-size: 44px;}
+
+		> li {
+		  margin-left: 20px;
+
+		  &:first-child { margin-left: 0; }
+
+		  a {
+				.fa {
+				  color: @gray-light;
+				  transition: color 0.4s;
+				}
+
+				&:hover {
+				  .fa-twitter { color: #5ec3df; }
+				  .fa-linkedin { color: #2089b5; }
+				}
+		  }
+		}
+  }
+}
